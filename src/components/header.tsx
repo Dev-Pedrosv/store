@@ -87,10 +87,17 @@ const Header = () => {
               </Button>
             )}
 
-            <Button variant="outline" className="w-full justify-start gap-2">
-              <Home size={16} />
-              Inicio
-            </Button>
+            <SheetClose asChild>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start gap-2"
+                >
+                  <Home size={16} />
+                  Inicio
+                </Button>
+              </Link>
+            </SheetClose>
 
             <Button variant="outline" className="w-full justify-start gap-2">
               <Percent size={16} />
@@ -112,10 +119,12 @@ const Header = () => {
         </SheetContent>
       </Sheet>
 
-      <h1 className="text-lg font-semibold ">
-        <span className="text-primary">FSW </span>
-        Store
-      </h1>
+      <Link href="/">
+        <h1 className="text-lg font-semibold ">
+          <span className="text-primary">FSW </span>
+          Store
+        </h1>
+      </Link>
 
       <Button size="icon" variant="outline">
         <ShoppingCartIcon />
